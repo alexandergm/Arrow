@@ -27,7 +27,7 @@ public class SimplePlayer : MonoBehaviour
             obj.GetComponent<Animator>().SetBool("Bool", true);
 
             //rt.GetComponent<MeshRenderer>().enabled = false;
-            //camera.GetComponent<CameraControl>().enabled = false;
+            camera.GetComponent<CameraControl>().enabled = false;
             Destroy(rt);            
         }
     }

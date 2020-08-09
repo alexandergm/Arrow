@@ -30,7 +30,7 @@ public class Fly : MonoBehaviour
         yaw += horizSensivity * Input.GetAxis("Mouse X");
         pitch -= horizSensivity * Input.GetAxis("Mouse Y");
 
-        transform.eulerAngles = new Vector3(pitch, yaw, 1.418f);
+        transform.eulerAngles = new Vector3(pitch, yaw, -10.507f);
         
         
 
