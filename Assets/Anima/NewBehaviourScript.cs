@@ -7,6 +7,7 @@ public class NewBehaviourScript : MonoBehaviour
 
     
     public GameObject camera;
+    public GameObject obj;
 
 
     void Start()
@@ -25,6 +26,7 @@ public class NewBehaviourScript : MonoBehaviour
         {
            
             camera.GetComponent<CameraControl>().enabled = false;
+            Destroy(obj);
 
         }
     }
