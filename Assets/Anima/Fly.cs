@@ -23,6 +23,7 @@ public class Fly : MonoBehaviour
         //Cursor.visible = false;
         
         
+        
     }
 
     private void Update()
@@ -30,7 +31,7 @@ public class Fly : MonoBehaviour
         yaw += horizSensivity * Input.GetAxis("Mouse X");
         pitch -= horizSensivity * Input.GetAxis("Mouse Y");
 
-        transform.eulerAngles = new Vector3(pitch, yaw, -10.507f);
+        transform.eulerAngles = new Vector3(pitch, yaw, -10.375f);
         
         
 
@@ -48,6 +49,7 @@ public class Fly : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             transform.localPosition += transform.forward * Time.deltaTime * controlSpeed;
+            gameObject.GetComponent<MeshRenderer>().enabled = true;
             Destroy(obj);
         }
 

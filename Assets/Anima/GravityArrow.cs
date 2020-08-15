@@ -5,6 +5,9 @@ public class GravityArrow : MonoBehaviour
 {
 
     public GameObject obj;
+    public ParticleSystem particleLauncher;
+    public ParticleSystem particleLauncher2;
+    public ParticleSystem particleLauncher3;
 
     void Start()
     {
@@ -24,6 +27,10 @@ public class GravityArrow : MonoBehaviour
             //obj.GetComponent<Rigidbody>().isKinematic = false;
             obj.GetComponent<Rigidbody>().freezeRotation = true;
             obj.GetComponent<Fly>().enabled = false;
+            particleLauncher.Emit(1);
+            particleLauncher2.Emit(1);
+            particleLauncher3.Emit(1);
+
         }
     }
 }
