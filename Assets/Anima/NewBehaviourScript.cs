@@ -8,6 +8,7 @@ public class NewBehaviourScript : MonoBehaviour
     
     public GameObject camera;
     public GameObject obj;
+    public GameObject finalCamera;
 
 
     void Start()
@@ -24,9 +25,10 @@ public class NewBehaviourScript : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
-           
-            camera.GetComponent<CameraControl>().enabled = false;
             Destroy(obj);
+            camera.GetComponent<Camera>().enabled = false;
+            finalCamera.GetComponent<Camera>().enabled = true;
+
 
         }
     }
