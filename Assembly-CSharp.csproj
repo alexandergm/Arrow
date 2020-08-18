@@ -83,6 +83,7 @@
     <Compile Include="Assets\HighlightPlus\Scripts\HighlightProfile.cs" />
     <Compile Include="Assets\HighlightPlus\Scripts\HighlightSeeThroughOccluder.cs" />
     <Compile Include="Assets\HighlightPlus\Scripts\HighlightTrigger.cs" />
+    <Compile Include="Assets\UIParticleEffects\Scripts\UIParticleSystem.cs" />
     <Compile Include="Assets\VCU\Demo\Scripts\2D\Platformer2DUserControl.cs" />
     <Compile Include="Assets\VCU\Demo\Scripts\2D\PlatformerCharacter2D.cs" />
     <Compile Include="Assets\VCU\Demo\Scripts\3D\ThirdPersonCharacter.cs" />

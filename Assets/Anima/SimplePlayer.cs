@@ -8,6 +8,7 @@ public class SimplePlayer : MonoBehaviour
     public GameObject rt;
     //public GameObject camera;
     public ragdoll calldie;
+    public GameObject star;
     //public GameObject child;
     //public Transform parent;
 
@@ -36,6 +37,7 @@ public class SimplePlayer : MonoBehaviour
 
             //    rt.GetComponent<Fly>().enabled = false;
             //Example(parent);
+            star.SetActive(true);
             Destroy(rt);
             calldie.die();
             
