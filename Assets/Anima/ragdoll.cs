@@ -45,6 +45,6 @@ public class ragdoll : MonoBehaviour
             collider.enabled = state;
         }
 
-        GetComponent<Collider>().enabled = !state;
+        //GetComponent<Collider>().enabled = !state;
     }
 }

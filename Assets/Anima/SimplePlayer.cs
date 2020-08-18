@@ -4,11 +4,13 @@ using System.Collections;
 public class SimplePlayer : MonoBehaviour
 {
     
-    //public GameObject obj;
+    public GameObject obj;
     public GameObject rt;
     //public GameObject camera;
     public ragdoll calldie;
     public GameObject star;
+    public float force = 10000;
+   
     //public GameObject child;
     //public Transform parent;
 
@@ -38,14 +40,17 @@ public class SimplePlayer : MonoBehaviour
             //    rt.GetComponent<Fly>().enabled = false;
             //Example(parent);
             star.SetActive(true);
-            Destroy(rt);
+            //Destroy(rt);
             calldie.die();
+            //obj.GetComponent<Rigidbody>().AddForce(rt.transform.TransformDirection(Vector3.forward) * force);
             
+
             //print(obj.gameObject.name);
             //obj.GetComponent<Animator>().SetBool("Bool", true);
             //obj.GetComponent<Animator>().enabled = false;
-            //obj.GetComponent<Rigidbody>().AddForce((Vector3.forward) * 1);
-            //rt.GetComponent<MeshRenderer>().enabled = false;
+            obj.GetComponent<Rigidbody>().AddForce((Vector3.forward) * force);
+            //rt.SetActive(false);
+
             //camera.GetComponent<CameraControl>().enabled = false;
 
         }
