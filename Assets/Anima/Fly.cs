@@ -6,6 +6,7 @@ public class Fly : MonoBehaviour
 
 {
     public GameObject obj;
+    //public GameObject arrow;
     public float movementSpeed = 100f;
     public float resetSpeed = 100f;
     public float shiftSpeed = 150f;
@@ -16,8 +17,10 @@ public class Fly : MonoBehaviour
 
     public float yaw = 0f;
     public float pitch = 0f;
+    //public  float forceImpule = 10000f;
+    //Rigidbody rb;
 
-    private void Start()
+    void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         //Cursor.visible = false;
@@ -26,7 +29,7 @@ public class Fly : MonoBehaviour
         
     }
 
-    private void Update()
+    void Update()
     {
         yaw += horizSensivity * Input.GetAxis("Mouse X");
         pitch -= horizSensivity * Input.GetAxis("Mouse Y");
@@ -67,5 +70,11 @@ public class Fly : MonoBehaviour
         {
             transform.localPosition += transform.right * Time.deltaTime * controlSpeed;
         }
+       
     }
+    //public void AddImpulse()
+    //{
+    //    rb = GetComponent<Rigidbody>();
+    //    rb.AddForce(arrow.transform.localPosition * forceImpule, ForceMode.Impulse);
+    //}
 }
