@@ -51,12 +51,12 @@ public class SimplePlayer : MonoBehaviour
             //    rt.GetComponent<Fly>().enabled = false;
             //Example(parent);
             star.SetActive(true);
-            obj.GetComponent<Animator>().SetBool("Bool", true);
+            //obj.GetComponent<Animator>().SetBool("Bool", true);
             Destroy(rt);
-           ////// Time.timeScale = 0.4f;
-            //////Time.fixedDeltaTime = Time.timeScale * 0.02f;
-            /////obj.GetComponent<Transform>().localScale = new Vector3(x, y, z);
-           ///// calldie.die();
+            Time.timeScale = 0.4f;
+            Time.fixedDeltaTime = Time.timeScale * 0.02f;
+            obj.GetComponent<Transform>().localScale = new Vector3(x, y, z);
+            calldie.die();
             //AddImpulse();
             
 
