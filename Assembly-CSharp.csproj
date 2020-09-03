@@ -83,6 +83,7 @@
     <Compile Include="Assets\HighlightPlus\Scripts\HighlightProfile.cs" />
     <Compile Include="Assets\HighlightPlus\Scripts\HighlightSeeThroughOccluder.cs" />
     <Compile Include="Assets\HighlightPlus\Scripts\HighlightTrigger.cs" />
+    <Compile Include="Assets\UI\Simple UI\Samples\IconPreview.cs" />
     <Compile Include="Assets\UIParticleEffects\Scripts\UIParticleSystem.cs" />
     <Compile Include="Assets\VCU\Demo\Scripts\2D\Platformer2DUserControl.cs" />
     <Compile Include="Assets\VCU\Demo\Scripts\2D\PlatformerCharacter2D.cs" />
@@ -132,6 +133,7 @@
     <None Include="Assets\PolygonNature\Shaders\SyntyStudios_Vines.shader" />
     <None Include="Assets\HighlightPlus\Resources\HighlightPlus\HighlightComposeOutline.shader" />
     <None Include="Assets\PolygonNature\Shaders\SyntyStudios_Water.shader" />
+    <None Include="Assets\UI\Simple UI\Fonts\OFL.txt" />
     <None Include="Assets\PolygonNature\Shaders\SyntyStudios_Trees.shader" />
     <None Include="Assets\PolygonNature\Shaders\VS_indirect.cginc" />
     <None Include="Assets\HighlightPlus\Resources\HighlightPlus\HighlightOutline.shader" />

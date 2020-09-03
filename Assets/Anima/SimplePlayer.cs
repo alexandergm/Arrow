@@ -6,6 +6,7 @@ public class SimplePlayer : MonoBehaviour
 {
     
     public GameObject obj;
+    public GameObject obj2;
     public GameObject arrow;
     public GameObject rt;
     public GameObject scr1;
@@ -14,7 +15,7 @@ public class SimplePlayer : MonoBehaviour
     public GameObject star;
     public float forceImpuse = 10000;
     public float x = 2;
-    public float y = 2;
+    public float y = 1.5f;
     public float z = 2;
 
     Rigidbody rb;
@@ -29,12 +30,19 @@ public class SimplePlayer : MonoBehaviour
     {
         //scr1 = GameObject.Find("SM_Prop_Arrow_01").GetComponent<Fly>();
         
+
     }
 
     // Update is called once per frame
     void Update()
     {
 
+    }
+
+    IEnumerator fsd()
+    {
+        yield return new WaitForSeconds(0.5f);
+        scr1.active = true;
     }
     //public void Example(Transform newParent)
     //   {
@@ -47,16 +55,20 @@ public class SimplePlayer : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
          {
-
+            StartCoroutine("fsd");
+            Time.timeScale = 0.3f;
+            Time.fixedDeltaTime = Time.timeScale * 0.02f;
             //    rt.GetComponent<Fly>().enabled = false;
             //Example(parent);
             star.SetActive(true);
+            //obj2.GetComponent<Animator>().enabled = false;
             //obj.GetComponent<Animator>().SetBool("Bool", true);
             Destroy(rt);
-            Time.timeScale = 0.4f;
-            Time.fixedDeltaTime = Time.timeScale * 0.02f;
             obj.GetComponent<Transform>().localScale = new Vector3(x, y, z);
             calldie.die();
+            
+            
+            
             //AddImpulse();
             
 
