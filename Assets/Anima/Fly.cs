@@ -17,6 +17,7 @@ public class Fly : MonoBehaviour
 
     public float yaw = 0f;
     public float pitch = 0f;
+    public bool IsFly = true;
     //public  float forceImpule = 10000f;
     //Rigidbody rb;
 
@@ -31,6 +32,7 @@ public class Fly : MonoBehaviour
 
     void Update()
     {
+        if (!IsFly) return;
         yaw += horizSensivity * Input.GetAxis("Mouse X");
         pitch -= horizSensivity * Input.GetAxis("Mouse Y");
 

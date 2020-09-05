@@ -4,12 +4,13 @@ using System.Collections;
 
 public class SimplePlayer : MonoBehaviour
 {
-    
     public GameObject obj;
     public GameObject obj2;
     public GameObject arrow;
     public GameObject rt;
     public GameObject scr1;
+    public float ArrowInBody = 8f;
+    public Transform body;
     //public GameObject camera;
     public ragdoll calldie;
     public GameObject star;
@@ -58,33 +59,37 @@ public class SimplePlayer : MonoBehaviour
             StartCoroutine("fsd");
             Time.timeScale = 0.3f;
             Time.fixedDeltaTime = Time.timeScale * 0.02f;
-            //    rt.GetComponent<Fly>().enabled = false;
+            rt.GetComponent<Fly>().IsFly = false;
+            rt.GetComponent<BoxCollider>().enabled = false;
             //Example(parent);
             star.SetActive(true);
             //obj2.GetComponent<Animator>().enabled = false;
             //obj.GetComponent<Animator>().SetBool("Bool", true);
-            Destroy(rt);
+            //Destroy(rt);
+            col.transform.localPosition += col.transform.forward * Time.deltaTime * ArrowInBody;
+
             obj.GetComponent<Transform>().localScale = new Vector3(x, y, z);
             calldie.die();
+            ;
+            rt.transform.SetParent(body);
             
-            
-            
+
             //AddImpulse();
-            
+
 
 
             //obj.GetComponent<Rigidbody>().AddForce(rt.transform.TransformDirection(Vector3.forward) * force);
-            
+
 
             //print(obj.gameObject.name);
-            
+
             //obj.GetComponent<Animator>().enabled = false;
             //obj.GetComponent<Rigidbody>().AddForce((Vector3.forward) * force);
             //rt.SetActive(false);
 
             //camera.GetComponent<CameraControl>().enabled = false;
 
-        }
+         }
     }
 
     public void AddImpulse()
