@@ -4,13 +4,14 @@ using System.Collections;
 
 public class SimplePlayer : MonoBehaviour
 {
+    //[SerializeField] Transform m_target;
     public GameObject obj;
     public GameObject obj2;
     public GameObject arrow;
     public GameObject rt;
     public GameObject scr1;
-    public float ArrowInBody = 8f;
-    public Transform body;
+   // public float ArrowInBody = 8f;
+    //public Transform body;
     //public GameObject camera;
     public ragdoll calldie;
     public GameObject star;
@@ -18,6 +19,9 @@ public class SimplePlayer : MonoBehaviour
     public float x = 2;
     public float y = 1.5f;
     public float z = 2;
+
+    
+    
 
     Rigidbody rb;
    
@@ -31,7 +35,7 @@ public class SimplePlayer : MonoBehaviour
     {
         //scr1 = GameObject.Find("SM_Prop_Arrow_01").GetComponent<Fly>();
         
-
+        
     }
 
     // Update is called once per frame
@@ -59,19 +63,19 @@ public class SimplePlayer : MonoBehaviour
             StartCoroutine("fsd");
             Time.timeScale = 0.3f;
             Time.fixedDeltaTime = Time.timeScale * 0.02f;
-            rt.GetComponent<Fly>().IsFly = false;
-            rt.GetComponent<BoxCollider>().enabled = false;
+            obj.GetComponent<Transform>().localScale = new Vector3(x, y, z);
+            //rt.GetComponent<Fly>().IsFly = false;
+            //rt.GetComponent<BoxCollider>().enabled = false; 
             //Example(parent);
             star.SetActive(true);
+            rt.SetActive(false);
+            //camera.GetComponent<SmoothFollowCamera>().target = m_target;
             //obj2.GetComponent<Animator>().enabled = false;
             //obj.GetComponent<Animator>().SetBool("Bool", true);
             //Destroy(rt);
-            col.transform.localPosition += col.transform.forward * Time.deltaTime * ArrowInBody;
-
-            obj.GetComponent<Transform>().localScale = new Vector3(x, y, z);
             calldie.die();
-            ;
-            rt.transform.SetParent(body);
+           // col.transform.localPosition += col.transform.forward * Time.deltaTime * ArrowInBody;
+           // rt.transform.SetParent(body);
             
 
             //AddImpulse();
@@ -85,7 +89,7 @@ public class SimplePlayer : MonoBehaviour
 
             //obj.GetComponent<Animator>().enabled = false;
             //obj.GetComponent<Rigidbody>().AddForce((Vector3.forward) * force);
-            //rt.SetActive(false);
+            rt.SetActive(false);
 
             //camera.GetComponent<CameraControl>().enabled = false;
 
