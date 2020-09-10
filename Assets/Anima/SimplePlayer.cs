@@ -10,9 +10,9 @@ public class SimplePlayer : MonoBehaviour
     public GameObject arrow;
     public GameObject rt;
     public GameObject scr1;
-   // public float ArrowInBody = 8f;
-    //public Transform body;
-    //public GameObject camera;
+    public float ArrowInBody = 8f;
+    public Transform body;
+    public SmoothFollowCamera camera;
     public ragdoll calldie;
     public GameObject star;
     public float forceImpuse = 10000;
@@ -64,19 +64,19 @@ public class SimplePlayer : MonoBehaviour
             Time.timeScale = 0.3f;
             Time.fixedDeltaTime = Time.timeScale * 0.02f;
             obj.GetComponent<Transform>().localScale = new Vector3(x, y, z);
-            //rt.GetComponent<Fly>().IsFly = false;
-            //rt.GetComponent<BoxCollider>().enabled = false; 
+            rt.GetComponent<Fly>().IsFly = false;
+            rt.GetComponent<BoxCollider>().enabled = false; 
             //Example(parent);
             star.SetActive(true);
-            rt.SetActive(false);
+            //rt.SetActive(false);
             //camera.GetComponent<SmoothFollowCamera>().target = m_target;
             //obj2.GetComponent<Animator>().enabled = false;
             //obj.GetComponent<Animator>().SetBool("Bool", true);
             //Destroy(rt);
             calldie.die();
-           // col.transform.localPosition += col.transform.forward * Time.deltaTime * ArrowInBody;
-           // rt.transform.SetParent(body);
-            
+            col.transform.localPosition += col.transform.forward * Time.deltaTime * ArrowInBody;
+            rt.transform.SetParent(body);
+            camera.enabled = false;
 
             //AddImpulse();
 
@@ -89,7 +89,7 @@ public class SimplePlayer : MonoBehaviour
 
             //obj.GetComponent<Animator>().enabled = false;
             //obj.GetComponent<Rigidbody>().AddForce((Vector3.forward) * force);
-            rt.SetActive(false);
+            //rt.SetActive(false);
 
             //camera.GetComponent<CameraControl>().enabled = false;
 
