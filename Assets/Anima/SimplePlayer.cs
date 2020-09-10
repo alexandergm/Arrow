@@ -7,6 +7,9 @@ public class SimplePlayer : MonoBehaviour
     //[SerializeField] Transform m_target;
     public GameObject obj;
     public GameObject obj2;
+    public ParticleSystem particleLauncher;
+    public ParticleSystem particleLauncher1;
+    public ParticleSystem particleLauncher2;
     public GameObject arrow;
     public GameObject rt;
     public GameObject scr1;
@@ -61,6 +64,9 @@ public class SimplePlayer : MonoBehaviour
         if (col.gameObject.CompareTag("Player"))
          {
             StartCoroutine("fsd");
+            particleLauncher.enableEmission = false;
+            particleLauncher1.enableEmission = false;
+            particleLauncher2.enableEmission = false;
             Time.timeScale = 0.3f;
             Time.fixedDeltaTime = Time.timeScale * 0.02f;
             obj.GetComponent<Transform>().localScale = new Vector3(x, y, z);
