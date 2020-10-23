@@ -62,13 +62,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\EasyColliderEditor\Editor\EasyColliderEditorWindow.cs" />
-    <Compile Include="Assets\HighlightPlus\Editor\HighlightEffectEditor.cs" />
-    <Compile Include="Assets\HighlightPlus\Editor\HighlightManagerEditor.cs" />
-    <Compile Include="Assets\HighlightPlus\Editor\HighlightProfileEditor.cs" />
-    <Compile Include="Assets\HighlightPlus\Editor\HighlightSeeThroughOccluderEditor.cs" />
-    <Compile Include="Assets\HighlightPlus\Editor\HighlightTriggerEditor.cs" />
-    <Compile Include="Assets\HighlightPlus\Editor\TransparentWithDepth.cs" />
+    <Compile Include="Assets\AssetForHighlights\Editor\HighlightEffectEditor.cs" />
+    <Compile Include="Assets\AssetForHighlights\Editor\HighlightManagerEditor.cs" />
+    <Compile Include="Assets\AssetForHighlights\Editor\HighlightProfileEditor.cs" />
+    <Compile Include="Assets\AssetForHighlights\Editor\HighlightSeeThroughOccluderEditor.cs" />
+    <Compile Include="Assets\AssetForHighlights\Editor\HighlightTriggerEditor.cs" />
+    <Compile Include="Assets\AssetForHighlights\Editor\TransparentWithDepth.cs" />
     <Reference Include="UnityEditor.TestRunner">
       <HintPath>D:/Unity/Arrow/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
     </Reference>
