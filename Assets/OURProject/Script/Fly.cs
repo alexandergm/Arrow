@@ -38,9 +38,11 @@ public class Fly : MonoBehaviour
 
         transform.eulerAngles = new Vector3(pitch, yaw, -10.375f);
 
+        if (Input.anyKey) gameObject.GetComponent<MeshRenderer>().enabled = true;
+        if(gameObject.GetComponent<MeshRenderer>().enabled) transform.localPosition += transform.forward * Time.deltaTime * controlSpeed;
         
 
-        //transform.localPosition += transform.forward * Time.deltaTime * controlSpeed;
+        /*transform.localPosition += transform.forward * Time.deltaTime * controlSpeed;
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
@@ -72,7 +74,8 @@ public class Fly : MonoBehaviour
         {
             transform.localPosition += transform.right * Time.deltaTime * controlSpeed;
         }
-       
+        */
+
     }
     //public void AddImpulse()
     //{
